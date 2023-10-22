@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ClientProviders from "@/components/ClientProviders";
+import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
+import SubscriptionProvider from "@/components/SubscriptionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +22,21 @@ export default function RootLayout({
   return (
     <ClientProviders>
       <html lang="en">
-        <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header />
+        <body className="flex flex-col min-h-screen">
+          <FirebaseAuthProvider>
+            <SubscriptionProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <Header />
 
-            {children}
-          </ThemeProvider>
+                {children}
+              </ThemeProvider>
+            </SubscriptionProvider>
+          </FirebaseAuthProvider>
         </body>
       </html>
     </ClientProviders>

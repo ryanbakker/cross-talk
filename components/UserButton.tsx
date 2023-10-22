@@ -12,9 +12,13 @@ import UserAvatar from "./UserAvatar";
 import { Session } from "next-auth";
 import { Button } from "./ui/button";
 import { signIn, signOut } from "next-auth/react";
+import { useSubscriptionStore } from "@/store/store";
+import LoadingSpinner from "./LoadingSpinner";
+import { StarIcon } from "lucide-react";
+import ManageAccountButton from "./ManageAccountButton";
 
 const UserButton = ({ session }: { session: Session | null }) => {
-  // Subscription listener...
+  const subscription = useSubscriptionStore((state) => state.subscription);
 
   if (!session)
     return (
@@ -30,9 +34,36 @@ const UserButton = ({ session }: { session: Session | null }) => {
           <UserAvatar name={session.user?.name} image={session.user?.image} />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>{session.user?.name}</DropdownMenuLabel>
+          <DropdownMenuLabel className="flex justify-center">
+            {session.user?.name}
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => signOut()}>
+
+          {subscription === undefined && (
+            <DropdownMenuItem>
+              <LoadingSpinner />
+            </DropdownMenuItem>
+          )}
+
+          {subscription?.role === "pro" && (
+            <>
+              <DropdownMenuLabel className="text-xs flex items-center justify-center space-x-1 text-[#E935C1] animate-pulse">
+                <StarIcon fill="#E935C1" />
+                <p>PRO</p>
+              </DropdownMenuLabel>
+
+              <DropdownMenuSeparator />
+
+              <DropdownMenuItem className="flex justify-center">
+                <ManageAccountButton />
+              </DropdownMenuItem>
+            </>
+          )}
+
+          <DropdownMenuItem
+            className="flex justify-center"
+            onClick={() => signOut()}
+          >
             Sign Out
           </DropdownMenuItem>
         </DropdownMenuContent>
