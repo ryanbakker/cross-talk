@@ -49,13 +49,17 @@ function LanguageSelect() {
             />
           </SelectTrigger>
 
-          <SelectContent>
+          <SelectContent className="max-h-[342px] overflow-auto">
             {subscription === undefined ? (
               <LoadingSpinner />
             ) : (
               <>
                 {getLanguages(isPro).map((language) => (
-                  <SelectItem key={language} value={language}>
+                  <SelectItem
+                    key={language}
+                    value={language}
+                    className="py-2 hover:cursor-pointer"
+                  >
                     {LanguagesSupportedMap[language]}
                   </SelectItem>
                 ))}
@@ -66,7 +70,7 @@ function LanguageSelect() {
                       key={language}
                       value={language}
                       disabled
-                      className="bg-gray-300/50 text-gray-500 dark:text-white py-2 my-1"
+                      className="text-gray-600 dark:text-white py-2 my-1"
                     >
                       {LanguagesSupportedMap[language]} (PRO)
                     </SelectItem>

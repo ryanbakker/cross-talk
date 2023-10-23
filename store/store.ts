@@ -10,17 +10,13 @@ export type LanguagesSupported =
   | "es"
   | "fr"
   | "ar"
-  | "bn"
   | "ru"
   | "pt"
-  | "ur"
   | "id"
   | "de"
   | "ja"
   | "nl"
-  | "fil"
   | "la"
-  | "sm"
   | "sv";
 
 export const LanguagesSupportedMap: Record<LanguagesSupported, string> = {
@@ -32,17 +28,16 @@ export const LanguagesSupportedMap: Record<LanguagesSupported, string> = {
   es: "Spanish",
   fr: "French",
   ar: "Arabic",
-  bn: "Bengali",
+
   ru: "Russian",
   pt: "Portuguese",
-  ur: "Urdu",
+
   id: "Indonesian",
   de: "German",
   ja: "Japanese",
   nl: "Dutch",
-  fil: "Filipino",
   la: "Latin",
-  sm: "Samoan",
+
   sv: "Swedish",
 };
 
