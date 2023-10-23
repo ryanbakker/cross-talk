@@ -49,7 +49,7 @@ function LanguageSelect() {
             />
           </SelectTrigger>
 
-          <SelectContent className="max-h-[342px] overflow-auto">
+          <SelectContent className="max-h-[315px] overflow-auto">
             {subscription === undefined ? (
               <LoadingSpinner />
             ) : (
