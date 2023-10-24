@@ -6,6 +6,7 @@ import ClientProviders from "@/components/ClientProviders";
 import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
 import SubscriptionProvider from "@/components/SubscriptionProvider";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "CrossTalk",
@@ -20,17 +21,18 @@ export default function RootLayout({
   return (
     <ClientProviders>
       <html lang="en">
-        <body className="flex flex-col min-h-screen">
+        <body className="!flex flex-col min-h-screen">
           <FirebaseAuthProvider>
             <SubscriptionProvider>
               <ThemeProvider
                 attribute="class"
-                defaultTheme="system"
+                defaultTheme="dark"
                 enableSystem
                 disableTransitionOnChange
               >
                 <Header />
                 {children}
+                <Footer />
                 <Toaster />
               </ThemeProvider>
             </SubscriptionProvider>

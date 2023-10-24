@@ -58,9 +58,9 @@ const messageConverter: FirestoreDataConverter<Message> = {
 export const messagesRef = (chatId: string) =>
   collection(db, "chats", chatId, "messages").withConverter(messageConverter);
 
-// Check if user has exceeded 25 min new message limit
+// Check if user has exceeded 20 min new message limit
 export const limitedMessagesRef = (chatId: string) =>
-  query(messagesRef(chatId), limit(25));
+  query(messagesRef(chatId), limit(20));
 
 export const sortedMessagesRef = (chatId: string) =>
   query(messagesRef(chatId), orderBy("timestamp", "asc"));

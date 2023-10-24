@@ -59,19 +59,19 @@ function ChatMessages({
         return (
           <div key={message.id} className="flex my-2 items-end">
             <div
-              className={`flex flex-col relative space-y-2 p-4 w-fit line-clamp-1 mx-2 rounded-lg ${
+              className={`flex flex-col relative space-y-2 px-4 py-2 w-fit line-clamp-1 mx-2 rounded-xl max-w-md ${
                 isSender
-                  ? "ml-auto bg-violet-600 text-white rounded-br-none"
-                  : "bg-gray-100 dark:text-gray-100 dark:bg-slate-700 rounded-bl-none"
+                  ? "ml-auto bg-violet-600 text-white max-w-md"
+                  : "bg-gray-100 dark:text-gray-100 dark:bg-slate-700"
               }`}
             >
-              <p
+              {/* <p
                 className={`text-xs italic font-extralight line-clamp-1 ${
                   isSender ? "text-right" : "text-left"
                 }`}
               >
                 {message.user.name.split(" ")[0]}
-              </p>
+              </p> */}
 
               <div className="flex space-x-2">
                 <p>{message.translated?.[language] || message.input}</p>
@@ -82,7 +82,7 @@ function ChatMessages({
             <UserAvatar
               name={message.user.name}
               image={message.user.image}
-              className={`${!isSender && "-order-1"}`}
+              className={`${!isSender && "-order-1"} h-9 w-9`}
             />
           </div>
         );

@@ -22,7 +22,11 @@ const UserButton = ({ session }: { session: Session | null }) => {
 
   if (!session)
     return (
-      <Button variant={"outline"} onClick={() => signIn()}>
+      <Button
+        variant={"outline"}
+        onClick={() => signIn()}
+        className="hover:cursor-pointer"
+      >
         Sign In
       </Button>
     );
@@ -61,7 +65,7 @@ const UserButton = ({ session }: { session: Session | null }) => {
           )}
 
           <DropdownMenuItem
-            className="flex justify-center"
+            className="flex justify-center hover:cursor-pointer"
             onClick={() => signOut()}
           >
             Sign Out

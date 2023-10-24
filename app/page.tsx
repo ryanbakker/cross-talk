@@ -4,8 +4,8 @@ import PlaceHolder from "@/images/landingPage/placeholder.jpeg";
 
 export default function Home() {
   return (
-    <main>
-      <div className="relative isolate pt-14 dark:bg-gray-900">
+    <main className="flex-1">
+      <div className="relative isolate pt-4 dark:bg-gray-900">
         <div
           className="absolute inset-x-0 top-20 -z-10 transform-gpu overflow-hidden blur-3xl"
           aria-hidden="true"
@@ -29,6 +29,7 @@ export default function Home() {
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
                 You speak your language, they speak their language.
                 <span className="text-indigo-600 dark:text-indigo-500">
+                  {" "}
                   Let AI handle the translation.
                 </span>
               </p>
