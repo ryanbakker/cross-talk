@@ -1,4 +1,4 @@
-# <svg width="450" height="59" viewBox="0 0 450 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+![cross-talk-two](https://github.com/ryanbakkerNZ/cross-talk/assets/112455939/7877fb00-befb-47cd-91ec-6381505d5d6a)![Uplo<svg width="450" height="59" viewBox="0 0 450 59" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.8621 40.9357H115.138L138 59H0L22.8621 40.9357Z" fill="black"/>
 <path d="M42.6897 22.9415H95.3103L110.103 34.8655H27.8965L42.6897 22.9415Z" fill="black"/>
 <path d="M60.4914 10H77.5086L89.2759 16.8713H48.7241L60.4914 10Z" fill="black"/>
@@ -12,8 +12,10 @@
 <path d="M401.939 58V0.399994H410.739V58H401.939Z" fill="black"/>
 <path d="M438.533 58L422.293 38.4L438.453 19.6H448.933L430.373 40.72L430.773 35.68L449.733 58H438.533ZM414.133 58V0.399994H422.933V58H414.133Z" fill="black"/>
 </svg>
-![cross-talk-two](https://github.com/ryanbakkerNZ/cross-talk/assets/112455939/33c1817f-7e59-48d8-8ed5-27b11bc2ea9e)
-Talking the Talk in Every Language
+ading cross-talk-two.svg…]()
+
+
+# CrossTalk: Talking the Talk in Every Language
 
 ## Welcome to CrossTalk, where language is no barrier to communication! 🚀 🌎 ✉️
 
