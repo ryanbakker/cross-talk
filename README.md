@@ -30,4 +30,12 @@ Go to <lik>https://cross-talk.vercel.app</link> and register with your Google Ac
 ### Contribution
 We welcome contributions! Feel free to open issues, submit pull requests, or share ideas to make CrossTalk even more incredible.
 
+### A Work in Progress...
+I am currently working on adding new features and general content to the project. Some of these include:
+- Add branding and instructions to the Next Auth sigin page.
+- Add more content to the landing page to give potential new users more information.
+- Fix the problem with the footer and chat input not sicking to the bottom of the page.
+- Add appropriate meta data to the pages for better SEO.
+- Replace landing page image with gif or multi-device showcase of the chat and translations working.
+
 ### Thank you for checking out CrossTalk
