@@ -1,4 +1,4 @@
-import LogoImage from "@logos/cross-talk-two.svg";
+import LogoImage from "@logos/CrossTalkLogo.svg";
 import Link from "next/link";
 import { AspectRatio } from "./ui/aspect-ratio";
 import Image from "next/image";
